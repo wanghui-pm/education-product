@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI教育平台三层架构</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .arrow-connector {
+            position: relative;
+            height: 40px;
+            margin: 10px 0;
+        }
+        .arrow-connector::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: #4b5563;
+        }
+        .arrow-connector::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 10px solid #4b5563;
+            transform: translateX(-50%);
+        }
+        .arrow-up {
+            position: absolute;
+            bottom: 0;
+            left: 70%;
+            width: 2px;
+            height: 20px;
+            background-color: #4b5563;
+        }
+        .arrow-up::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 10px solid #4b5563;
+            transform: translateX(-50%);
+        }
+        .layer-box {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .layer-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .component {
+            transition: all 0.2s ease;
+        }
+        .component:hover {
+            transform: scale(1.05);
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-6 shadow-md">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-center">AI教育平台三层架构</h1>
+            <p class="text-center mt-2 text-blue-100">智能引擎层 · 知识中枢层 · 场景解决方案层</p>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 py-8">
+        <!-- Introduction -->
+        <section class="mb-12 text-center max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4">架构概述</h2>
+            <p class="text-gray-600">AI教育平台采用三层架构设计，从底层技术到顶层应用，构建了完整的智能教育生态系统。各层之间相互协作，数据流动畅通，共同支持智能化教育场景的实现。</p>
+        </section>
+        
+        <!-- Architecture Diagram -->
+        <section class="mb-16">
+            <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-center mb-8">三层架构模型</h2>
+                
+                <!-- Layer 3: Scenario Solution Layer -->
+                <div class="layer-box bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-5 mb-8">
+                    <h3 class="text-xl font-bold text-blue-700 text-center mb-4">场景解决方案层</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="component bg-white rounded-lg p-4 shadow text-center border border-blue-200">
+                            <div class="text-blue-600 mb-2"><i class="fas fa-chalkboard-teacher text-xl"></i></div>
+                            <h4 class="font-semibold">智能教学设计</h4>
+                            <p class="text-sm text-gray-600 mt-2">课程规划、教学内容生成、教学活动设计</p>
+                        </div>
+                        <div class="component bg-white rounded-lg p-4 shadow text-center border border-blue-200">
+                            <div class="text-blue-600 mb-2"><i class="fas fa-user-graduate text-xl"></i></div>
+                            <h4 class="font-semibold">个性化学习</h4>
+                            <p class="text-sm text-gray-600 mt-2">自适应学习路径、个性化内容推荐、学习辅导</p>
+                        </div>
+                        <div class="component bg-white rounded-lg p-4 shadow text-center border border-blue-200">
+                            <div class="text-blue-600 mb-2"><i class="fas fa-chart-line text-xl"></i></div>
+                            <h4 class="font-semibold">智能教育评估</h4>
+                            <p class="text-sm text-gray-600 mt-2">作业评估、能力诊断、学习分析报告</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Arrow Connector -->
+                <div class="arrow-connector relative mx-auto">
+                    <div class="absolute left-1/4 top-1/2 transform -translate-y-1/2 text-sm text-gray-500">数据收集</div>
+                    <div class="arrow-up"></div>
+                    <div class="absolute right-1/4 top-1/2 transform -translate-y-1/2 text-sm text-gray-500">服务提供</div>
+                </div>
+                
+                <!-- Layer 2: Knowledge Hub Layer -->
+                <div class="layer-box bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-xl p-5 mb-8">
+                    <h3 class="text-xl font-bold text-green-700 text-center mb-4">知识中枢层</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="component bg-white rounded-lg p-4 shadow text-center border border-green-200">
+                            <div class="text-green-600 mb-2"><i class="fas fa-book text-xl"></i></div>
+                            <h4 class="font-semibold">学科知识库</h4>
+                            <p class="text-sm text-gray-600 mt-2">结构化知识图谱、知识点关联网络、教学资源库</p>
+                        </div>
+                        <div class="component bg-white rounded-lg p-4 shadow text-center border border-green-200">
+                            <div class="text-green-600 mb-2"><i class="fas fa-sitemap text-xl"></i></div>
+                            <h4 class="font-semibold">教学策略库</h4>
+                            <p class="text-sm text-gray-600 mt-2">教学方法、教学模式、教学策略集合</p>
+                        </div>
+                        <div class="component bg-white rounded-lg p-4 shadow text-center border border-green-200">
+                            <div class="text-green-600 mb-2"><i class="fas fa-brain text-xl"></i></div>
+                            <h4 class="font-semibold">学习者模型</h4>
+                            <p class="text-sm text-gray-600 mt-2">认知状态、学习风格、学习行为记录</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Arrow Connector -->
+                <div class="arrow-connector relative mx-auto">
+                    <div class="absolute left-1/4 top-1/2 transform -translate-y-1/2 text-sm text-gray-500">知识处理请求</div>
+                    <div class="arrow-up"></div>
+                    <div class="absolute right-1/4 top-1/2 transform -translate-y-1/2 text-sm text-gray-500">处理结果</div>
+                </div>
+                
+                <!-- Layer 1: Intelligent Engine Layer -->
+                <div class="layer-box bg-gradient-to-r from-purple-50 to-purple-100 border border-purple-200 rounded-xl p-5">
+                    <h3 class="text-xl font-bold text-purple-700 text-center mb-4">智能引擎层</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="component bg-white rounded-lg p-4 shadow text-center border border-purple-200">
+                            <div class="text-purple-600 mb-2"><i class="fas fa-language text-xl"></i></div>
+                            <h4 class="font-semibold">自然语言处理</h4>
+                            <p class="text-sm text-gray-600 mt-2">文本理解、语义分析、智能问答、文本生成</p>
+                        </div>
+                        <div class="component bg-white rounded-lg p-4 shadow text-center border border-purple-200">
+                            <div class="text-purple-600 mb-2"><i class="fas fa-cogs text-xl"></i></div>
+                            <h4 class="font-semibold">机器学习算法</h4>
+                            <p class="text-sm text-gray-600 mt-2">分类、聚类、推荐、预测算法</p>
+                        </div>
+                        <div class="component bg-white rounded-lg p-4 shadow text-center border border-purple-200">
+                            <div class="text-purple-600 mb-2"><i class="fas fa-database text-xl"></i></div>
+                            <h4 class="font-semibold">数据分析引擎</h4>
+                            <p class="text-sm text-gray-600 mt-2">数据处理、模式识别、趋势分析</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Layer Details -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-center mb-8">层级详细说明</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Layer 1 Detail -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="bg-purple-600 text-white p-4">
+                        <h3 class="text-xl font-bold">智能引擎层</h3>
+                        <p class="text-sm text-purple-100">技术支撑层</p>
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-600 mb-4">作为AI教育平台的底层，提供各种AI技术能力，是整个平台智能化的核心技术支撑。</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>处理和理解各类教育数据</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>提供算法支持和计算能力</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>实现机器学习模型训练与推理</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>支持自然语言交互和理解</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Layer 2 Detail -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="bg-green-600 text-white p-4">
+                        <h3 class="text-xl font-bold">知识中枢层</h3>
+                        <p class="text-sm text-green-100">内容与逻辑层</p>
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-600 mb-4">整合和管理教育知识资源，构建教育领域知识结构，是连接技术与应用的桥梁。</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>构建和维护教育知识图谱</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>管理学习者认知状态和学习行为</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>整合教学策略和教学方法</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>提供知识检索和推理能力</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Layer 3 Detail -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="bg-blue-600 text-white p-4">
+                        <h3 class="text-xl font-bold">场景解决方案层</h3>
+                        <p class="text-sm text-blue-100">应用服务层</p>
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-600 mb-4">直接面向用户的应用层，根据教育场景需求，提供具体的智能教育服务。</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>支持智能化教学设计和教学实施</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>提供个性化学习体验和资源</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>实现智能评估和学习分析</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>构建各类教育应用场景的解决方案</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interaction Between Layers -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-center mb-6">层级间的交互关系</h2>
+                
+                <div class="relative p-4 border-l-4 border-gray-300 mb-6">
+                    <h3 class="font-bold text-lg text-gray-800">场景解决方案层 ↔ 知识中枢层</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                        <div>
+                            <h4 class="text-blue-600 font-semibold text-sm mb-2">下行数据流：</h4>
+                            <ul class="text-sm space-y-1">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-down text-blue-500 mt-1 mr-2"></i>
+                                    <span>用户需求和学习目标</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-down text-blue-500 mt-1 mr-2"></i>
+                                    <span>学习行为和交互数据</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-down text-blue-500 mt-1 mr-2"></i>
+                                    <span>教学场景信息</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-green-600 font-semibold text-sm mb-2">上行数据流：</h4>
+                            <ul class="text-sm space-y-1">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-up text-green-500 mt-1 mr-2"></i>
+                                    <span>个性化学习资源和路径</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-up text-green-500 mt-1 mr-2"></i>
+                                    <span>学习者模型分析结果</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-up text-green-500 mt-1 mr-2"></i>
+                                    <span>教学策略建议</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative p-4 border-l-4 border-gray-300">
+                    <h3 class="font-bold text-lg text-gray-800">知识中枢层 ↔ 智能引擎层</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                        <div>
+                            <h4 class="text-green-600 font-semibold text-sm mb-2">下行数据流：</h4>
+                            <ul class="text-sm space-y-1">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-down text-green-500 mt-1 mr-2"></i>
+                                    <span>知识结构化请求</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-down text-green-500 mt-1 mr-2"></i>
+                                    <span>数据分析需求</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-down text-green-500 mt-1 mr-2"></i>
+                                    <span>模型训练和优化请求</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-purple-600 font-semibold text-sm mb-2">上行数据流：</h4>
+                            <ul class="text-sm space-y-1">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-up text-purple-500 mt-1 mr-2"></i>
+                                    <span>文本分析和语义理解结果</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-up text-purple-500 mt-1 mr-2"></i>
+                                    <span>数据模式和规律发现</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-up text-purple-500 mt-1 mr-2"></i>
+                                    <span>预测和推荐算法输出</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">AI教育平台三层架构模型</p>
+            <p class="text-sm text-gray-400">智能引擎层 · 知识中枢层 · 场景解决方案层</p>
+        </div>
+    </footer>
+</body>
+</html>
